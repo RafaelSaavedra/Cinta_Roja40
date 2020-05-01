@@ -53,4 +53,5 @@ let scooby = {
     }
 }
 console.log(scooby.saluda());
+console.log(snoopy.saluda());
 

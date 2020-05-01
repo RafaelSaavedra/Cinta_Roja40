@@ -22,7 +22,7 @@ console.log(snoopy.color);
 console.log(scooby.nombre);
 console.log(huesos.saluda());
 
-class Clientes {
+class Cliente {
     constructor(id,nombre,edad,genero,email,tel){
         this.id = id
         this.nombre = nombre

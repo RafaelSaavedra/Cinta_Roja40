@@ -21,12 +21,21 @@ class MaestroFisica extends Maestro{
      this.calificaciones = calificaciones
      this.antiguedad = antiguedad
     }
+    promedio(){
+        let total = 0    
+        for(let i=0; i< PedroFlores.calificaciones.length; i++){
+        total = total + PedroFlores.calificaciones[i]  
+        }
+        return total/PedroFlores.calificaciones.length
+    
+    }
 }
 let PedroFlores = new MaestroFisica ("fisica1",[6,7,4,8,9,1,10,9],"10 años")
 
 console.log("Profesor PedroFlores ",PedroFlores.materia);
 console.log(PedroFlores.calificaciones);
 console.log(PedroFlores.antiguedad+" de antiguedad");
+console.log("Su promedio de calificaciones es ",PedroFlores.promedio());
 
 class MaestroMusica extends Maestro{
     constructor(materia, calificaciones, edad){
@@ -37,9 +46,10 @@ class MaestroMusica extends Maestro{
         promedio(){
         let total = 0    
         for(let i=0; i< JuanMartinez.calificaciones.length; i++){
-        total = total + JuanMartinez.calificaciones[i]   
-        return total/JuanMartinez.calificaciones.length
+        total = total + JuanMartinez.calificaciones[i]  
         }
+        return total/JuanMartinez.calificaciones.length
+    
     }
 }
 let JuanMartinez = new MaestroMusica ("musicaClasica",[8,9,5,3,7,9,4,8], "57 años")
