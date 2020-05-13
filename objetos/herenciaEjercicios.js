@@ -2,26 +2,21 @@ class Maestro{
     constructor(materia){
     this.materia = materia
 }
-/*
-calcular(promedio){
-    let calTotal = 0;
-    let promedio;
-    for(i=0; i<8;i++)
-    calTotal += this.calificaciones[i]
-    promedio =calTotal/8
-    console.log(promedio);
-    
+    promedio() {
+    let total = 0;
+    for(let i=0; i<this.calificaciones.length;i++){
+    total += this.calificaciones[i]      
 }
-*/
+    return total/this.calificaciones.length
 }
-
+}
 class MaestroFisica extends Maestro{
     constructor(materia, calificaciones, antiguedad, ){
      super(materia)    
      this.calificaciones = calificaciones
      this.antiguedad = antiguedad
     }
-    promedio(){
+    /*promedio(){
         let total = 0    
         for(let i=0; i< PedroFlores.calificaciones.length; i++){
         total = total + PedroFlores.calificaciones[i]  
@@ -29,8 +24,9 @@ class MaestroFisica extends Maestro{
         return total/PedroFlores.calificaciones.length
     
     }
+    */
 }
-let PedroFlores = new MaestroFisica ("fisica1",[6,7,4,8,9,1,10,9],"10 años")
+let PedroFlores = new MaestroFisica ("fisica1",[6,7,6,8,9,7,10,9],"10 años")
 
 console.log("Profesor PedroFlores ",PedroFlores.materia);
 console.log(PedroFlores.calificaciones);
@@ -43,16 +39,16 @@ class MaestroMusica extends Maestro{
         this.calificaciones = calificaciones
         this.edad = edad
     }
-        promedio(){
+        /*promedio(){
         let total = 0    
         for(let i=0; i< JuanMartinez.calificaciones.length; i++){
         total = total + JuanMartinez.calificaciones[i]  
         }
         return total/JuanMartinez.calificaciones.length
-    
-    }
+        }
+*/
 }
-let JuanMartinez = new MaestroMusica ("musicaClasica",[8,9,5,3,7,9,4,8], "57 años")
+let JuanMartinez = new MaestroMusica ("musicaClasica",[8,9,5,10,7,9,9,8], "57 años")
 console.log("Profesor JuanMartinez ", JuanMartinez.materia);
 console.log(JuanMartinez.calificaciones);
 console.log(JuanMartinez.edad , " de edad")

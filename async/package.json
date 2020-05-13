@@ -1,0 +1,11 @@
+{
+  "name": "requests",
+  "version": "1.0.0",
+  "description": "Pruebas con request",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rafael Saavedra",
+  "license": "ISC"
+}
